@@ -1,0 +1,14 @@
+//
+// Prefix header for all source files
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+    #import <QuartzCore/QuartzCore.h>
+    #import <CoreData/CoreData.h>
+    #import "OBShapedButton.h"
+    #import <FBSDKCoreKit/FBSDKCoreKit.h>
+    #import <FBSDKLoginKit/FBSDKLoginKit.h>
+    #import <FBSDKShareKit/FBSDKShareKit.h>
+#endif
