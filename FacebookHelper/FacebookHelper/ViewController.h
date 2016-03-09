@@ -8,9 +8,10 @@
 #import <UIKit/UIKit.h>
 #import "model/facebook/FBCache.h"
 #import "model/facebook/FacebookHelper.h"
+#import "MediaPicker.h"
+#import "FBShareUtility.h"
 
 @interface ViewController : UIViewController
 @property (strong, nonatomic) IBOutlet OBShapedButton *btnFacebookLogin;
-
 @end
 

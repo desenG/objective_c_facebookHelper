@@ -8,12 +8,18 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+{
+    BOOL isSelectingAssetOne;
+    MediaPicker* videoPicker;
+    MediaPicker* imagePicker;
+}
 
 @end
 
 @implementation ViewController
 
 @synthesize btnFacebookLogin;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -54,6 +60,54 @@
                 [btnFacebookLogin setTitle:@"LOGIN" forState:UIControlStateNormal];
             }
         }];
+    }
+}
+
+- (IBAction)LoadVideoAsset:(id)sender{
+    if ([UIImagePickerController isSourceTypeAvailable:
+         UIImagePickerControllerSourceTypeSavedPhotosAlbum] == NO)
+    {
+    }else{
+        videoPicker=[[MediaPicker alloc] initWithViewController:self];
+        [videoPicker loadAssetWithAssetType:(NSString*)kUTTypeMovie];
+    }
+}
+
+- (IBAction)LoadImageAsset:(id)sender{
+    if ([UIImagePickerController isSourceTypeAvailable:
+         UIImagePickerControllerSourceTypeSavedPhotosAlbum] == NO)
+    {
+    }else{
+        imagePicker=[[MediaPicker alloc] initWithViewController:self];
+        [imagePicker loadAssetWithAssetType:(NSString*)kUTTypeImage];
+    }
+}
+
+- (IBAction)fbShareWithLink:(id)sender{
+
+}
+
+- (IBAction)fbShareWithLoadedVideo:(id)sender{
+    if(videoPicker)
+    {
+        NSData *videoData = [NSData dataWithContentsOfURL:videoPicker.pickedAssetURL];
+//        FBShareUtility* fbImageShare=[[FBShareUtility alloc]initWithTitle:@"" andDescription:@"" andPhoto:im];
+//        [fbImageShare startGraphAction];
+    }
+    else{
+        NSLog(@"load image first.");
+    }
+}
+
+- (IBAction)fbShareWithLoadedImage:(id)sender{
+    if(imagePicker)
+    {
+        UIImage *im = [UIImage imageWithData: [NSData dataWithContentsOfURL:imagePicker.pickedAssetURL]];
+        FBShareUtility* fbImageShare=[[FBShareUtility alloc]initWithTitle:@"" andDescription:@"" andPhoto:im];
+        [fbImageShare startGraphAction];
+    }
+    else{
+        NSLog(@"load image first.");
     }
 }
 

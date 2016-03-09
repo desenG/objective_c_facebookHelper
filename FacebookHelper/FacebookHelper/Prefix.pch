@@ -11,4 +11,8 @@
     #import <FBSDKCoreKit/FBSDKCoreKit.h>
     #import <FBSDKLoginKit/FBSDKLoginKit.h>
     #import <FBSDKShareKit/FBSDKShareKit.h>
+    #import <CoreMedia/CoreMedia.h>
+    #import <MobileCoreServices/UTCoreTypes.h>
+    #import <AssetsLibrary/AssetsLibrary.h>
+    #import <MediaPlayer/MediaPlayer.h>
 #endif

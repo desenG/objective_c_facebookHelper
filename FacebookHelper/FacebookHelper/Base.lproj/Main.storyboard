@@ -18,10 +18,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsC-iA-bc2" customClass="OBShapedButton">
-                                <rect key="frame" x="167" y="259" width="140" height="30"/>
+                                <rect key="frame" x="47" y="0.0" width="140" height="30"/>
                                 <state key="normal" title="LOGIN"/>
                                 <connections>
                                     <action selector="actionFacebookLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qnP-uE-VoU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9L-iE-vHh">
+                                <rect key="frame" x="97" y="52" width="75" height="30"/>
+                                <state key="normal" title="Load video"/>
+                                <connections>
+                                    <action selector="LoadVideoAsset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MiW-Fx-cjU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQq-YB-vJA">
+                                <rect key="frame" x="97" y="150" width="117" height="30"/>
+                                <state key="normal" title="fb share with link"/>
+                                <connections>
+                                    <action selector="fbShareWithLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Phm-eP-g7f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phj-xT-Jmk">
+                                <rect key="frame" x="97" y="102" width="80" height="30"/>
+                                <state key="normal" title="Load image"/>
+                                <connections>
+                                    <action selector="LoadImageAsset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a5X-z1-l0T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3H7-WQ-dc7">
+                                <rect key="frame" x="217" y="52" width="98" height="30"/>
+                                <state key="normal" title="fb share video"/>
+                                <connections>
+                                    <action selector="fbShareWithLoadedVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TgE-Md-2y9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZC2-Bb-ZsX">
+                                <rect key="frame" x="217" y="102" width="102" height="30"/>
+                                <state key="normal" title="fb share image"/>
+                                <connections>
+                                    <action selector="fbShareWithLoadedImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gI1-UV-vcv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -33,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="226" y="273"/>
+            <point key="canvasLocation" x="231" y="295"/>
         </scene>
     </scenes>
 </document>
